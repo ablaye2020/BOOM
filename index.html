@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="pt" dir="ltr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JOY BOY - إبلاغ واتساب | Multi-Emails</title>
+    <title>JOY BOY - Denunciar WhatsApp | África</title>
     <style>
         * {
             margin: 0;
@@ -12,7 +12,7 @@
         }
 
         body {
-            font-family: 'Cairo', 'Segoe UI', Tahoma, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             min-height: 100vh;
             background: linear-gradient(135deg, #0a0f1e, #0a1a2a);
             display: flex;
@@ -22,7 +22,7 @@
             position: relative;
         }
 
-        /* Image de fond Luffy */
+        /* Sua imagem Luffy/Joy Boy */
         body::before {
             content: "";
             position: fixed;
@@ -30,7 +30,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-image: url('https://wallpapercave.com/wp/wp6603742.jpg');
+            background-image: url('https://i.ibb.co/5xYDMJsd/04496-E0-E-A712-4497-9488-1-A0-FCA0-F537-C.jpg');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -54,24 +54,21 @@
             backdrop-filter: blur(12px);
             border-radius: 48px;
             padding: 40px 35px;
-            max-width: 650px;
+            max-width: 700px;
             width: 100%;
             box-shadow: 0 30px 60px rgba(0,0,0,0.6), 0 0 0 1px rgba(255,200,100,0.2);
             border: 1px solid rgba(255,180,80,0.3);
-            transition: 0.3s;
         }
 
         h1 {
             font-size: 3rem;
             text-align: center;
             margin-bottom: 8px;
-            font-family: 'Cairo', sans-serif;
             background: linear-gradient(135deg, #FFD700, #FF8C00, #FF4500);
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
             text-shadow: 0 0 20px rgba(255,100,0,0.4);
-            letter-spacing: 2px;
         }
 
         .sous-titre {
@@ -89,7 +86,7 @@
 
         .info-box {
             background: linear-gradient(135deg, #FF660022, #FF330022);
-            border-right: 5px solid #FFA500;
+            border-left: 5px solid #FFA500;
             padding: 12px 18px;
             border-radius: 24px;
             margin-bottom: 25px;
@@ -105,7 +102,6 @@
             font-weight: bold;
             color: #FFD966;
             font-size: 1rem;
-            letter-spacing: 0.5px;
         }
 
         input, select {
@@ -118,7 +114,6 @@
             font-size: 1rem;
             transition: 0.2s;
             outline: none;
-            font-family: 'Cairo', monospace;
         }
 
         input:focus, select:focus {
@@ -127,11 +122,6 @@
             background: #1a1f2e;
         }
 
-        select {
-            cursor: pointer;
-        }
-
-        /* Section multi-emails avec cases à cocher */
         .emails-section {
             background: #0A0E18;
             border-radius: 28px;
@@ -147,12 +137,28 @@
             display: flex;
             align-items: center;
             gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .region-group {
+            margin-bottom: 20px;
+            border-bottom: 1px solid #FFA50022;
+            padding-bottom: 15px;
+        }
+
+        .region-title {
+            color: #FFAA55;
+            font-size: 0.8rem;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
         }
 
         .checkbox-group {
             display: flex;
             flex-direction: column;
-            gap: 10px;
+            gap: 8px;
         }
 
         .checkbox-item {
@@ -160,7 +166,7 @@
             align-items: center;
             gap: 12px;
             cursor: pointer;
-            padding: 8px 12px;
+            padding: 6px 12px;
             background: #11161f;
             border-radius: 40px;
             transition: 0.2s;
@@ -171,8 +177,8 @@
         }
 
         .checkbox-item input {
-            width: 20px;
-            height: 20px;
+            width: 18px;
+            height: 18px;
             cursor: pointer;
             accent-color: #FF8C00;
             margin: 0;
@@ -182,13 +188,13 @@
             margin: 0;
             cursor: pointer;
             color: #ddd;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             font-weight: normal;
         }
 
         .checkbox-item small {
             color: #FFA50088;
-            font-size: 0.7rem;
+            font-size: 0.65rem;
         }
 
         button {
@@ -204,7 +210,6 @@
             cursor: pointer;
             transition: 0.2s;
             box-shadow: 0 8px 20px rgba(255,69,0,0.4);
-            font-family: 'Cairo', sans-serif;
         }
 
         button:hover {
@@ -229,20 +234,18 @@
             text-align: center;
         }
 
-        .arabic-message {
+        .portuguese-message {
             background: #11161f;
             padding: 15px;
             border-radius: 20px;
-            font-family: 'Cairo', monospace;
-            font-size: 0.9rem;
+            font-family: monospace;
+            font-size: 0.85rem;
             color: #FFE4B5;
             margin-top: 8px;
             white-space: pre-wrap;
             word-break: break-word;
-            border-right: 3px solid #FF8C00;
-            direction: rtl;
-            text-align: right;
-            line-height: 1.7;
+            border-left: 3px solid #FF8C00;
+            line-height: 1.6;
             max-height: 220px;
             overflow-y: auto;
         }
@@ -272,70 +275,112 @@
 <body>
 
 <div class="container">
-    <h1>⚡ جوي بوي ⚡<br><span style="font-size:1.2rem;">JOY BOY</span></h1>
+    <h1>⚡ JOY BOY ⚡</h1>
     <div style="text-align: center;">
-        <span class="sous-titre">إبلاغ رسمي - واتساب</span>
+        <span class="sous-titre">Denúncia Oficial - WhatsApp</span>
     </div>
 
     <div class="info-box">
-        📢 إرسال إلى عدة جهات · اختر الوجهات أدناه
+        🌍 Enviar para vários destinatários · Selecione abaixo
     </div>
 
-    <label>📞 الرقم المستهدف (مع مفتاح الدولة)</label>
-    <input type="tel" id="numero" placeholder="+223XXXXXXXXX أو +33XXXXXXXXX" value="+223">
+    <label>📞 NÚMERO ALVO (com código do país)</label>
+    <input type="tel" id="numero" placeholder="+223XXXXXXXXX ou +221XXXXXXXXX ou +55XXXXXXXXX" value="+223">
 
-    <label>⚠️ سبب الإبلاغ</label>
+    <label>⚠️ MOTIVO DA DENÚNCIA</label>
     <select id="motif">
-        <option value="احتيال">💰 احتيال / نصب</option>
-        <option value="تحرش خطير">🗣️ تحرش خطير</option>
-        <option value="رسائل مزعجة">📨 سبام / إزعاج</option>
-        <option value="انتحال شخصية">🎭 انتحال هوية</option>
-        <option value="تهديد / محتوى محظور">🔞 تهديد / محتوى غير قانوني</option>
+        <option value="Golpe">💰 GOLPE / ESTAFA</option>
+        <option value="Assédio grave">🗣️ ASSÉDIO GRAVE</option>
+        <option value="Spam">📨 SPAM / INCÔMODO</option>
+        <option value="Falsa identidade">🎭 FALSA IDENTIDADE</option>
+        <option value="Ameaça">🔞 AMEAÇA / CONTEÚDO PROIBIDO</option>
+        <option value="Golpe financeiro">💸 GOLPE FINANCEIRO</option>
     </select>
 
-    <!-- Section emails multiples -->
     <div class="emails-section">
         <div class="emails-title">
-            📧 إرسال إلى (اختر واحداً أو أكثر)
+            📧 Escolha os destinatários (um ou mais)
         </div>
-        <div class="checkbox-group">
-            <div class="checkbox-item">
-                <input type="checkbox" id="email_abuse" value="abuse@support.whatsapp.com" checked>
-                <label for="email_abuse">📱 abuse@support.whatsapp.com <small>(واتساب العالمي)</small></label>
+
+        <!-- Grupo África -->
+        <div class="region-group">
+            <div class="region-title">
+                🌍 <span style="color:#FFD700;">ÁFRICA</span>
             </div>
-            <div class="checkbox-item">
-                <input type="checkbox" id="email_wa_fr" value="wa-france@support.whatsapp.com">
-                <label for="email_wa_fr">🇫🇷 wa-france@support.whatsapp.com <small>(فرنسا)</small></label>
-            </div>
-            <div class="checkbox-item">
-                <input type="checkbox" id="email_abuse_meta" value="abuse@fb.com">
-                <label for="email_abuse_meta">🛡️ abuse@fb.com <small>(ميتا - فيسبوك)</small></label>
-            </div>
-            <div class="checkbox-item">
-                <input type="checkbox" id="email_signal_spam" value="signal@signal-spam.fr">
-                <label for="email_signal_spam">📢 signal@signal-spam.fr <small>(سبام فرنسا)</small></label>
-            </div>
-            <div class="checkbox-item">
-                <input type="checkbox" id="email_pharos" value="pharos@interieur.gouv.fr">
-                <label for="email_pharos">⚖️ pharos@interieur.gouv.fr <small>(شرطة الانترنت - جرائم)</small></label>
+            <div class="checkbox-group">
+                <div class="checkbox-item">
+                    <input type="checkbox" id="email_africa" value="africa@support.whatsapp.com">
+                    <label for="email_africa">🌍 africa@support.whatsapp.com <small>(WhatsApp África)</small></label>
+                </div>
+                <div class="checkbox-item">
+                    <input type="checkbox" id="email_mali" value="mali@support.whatsapp.com">
+                    <label for="email_mali">🇲🇱 mali@support.whatsapp.com <small>(Mali)</small></label>
+                </div>
+                <div class="checkbox-item">
+                    <input type="checkbox" id="email_senegal" value="senegal@support.whatsapp.com">
+                    <label for="email_senegal">🇸🇳 senegal@support.whatsapp.com <small>(Senegal)</small></label>
+                </div>
+                <div class="checkbox-item">
+                    <input type="checkbox" id="email_ci" value="civ@support.whatsapp.com">
+                    <label for="email_ci">🇨🇮 civ@support.whatsapp.com <small>(Costa do Marfim)</small></label>
+                </div>
+                <div class="checkbox-item">
+                    <input type="checkbox" id="email_cameroon" value="cameroon@support.whatsapp.com">
+                    <label for="email_cameroon">🇨🇲 cameroon@support.whatsapp.com <small>(Camarões)</small></label>
+                </div>
+                <div class="checkbox-item">
+                    <input type="checkbox" id="email_francafrique" value="francafrique@support.whatsapp.com">
+                    <label for="email_francafrique">🇫🇷🌍 francafrique@support.whatsapp.com <small>(África francófona)</small></label>
+                </div>
             </div>
         </div>
-        <div class="selected-count" id="selectedCount">✅ تم اختيار 1 جهة</div>
+
+        <!-- Grupo Internacional -->
+        <div class="region-group">
+            <div class="region-title">
+                🌐 <span style="color:#FFD700;">INTERNACIONAL</span>
+            </div>
+            <div class="checkbox-group">
+                <div class="checkbox-item">
+                    <input type="checkbox" id="email_abuse" value="abuse@support.whatsapp.com" checked>
+                    <label for="email_abuse">🌎 abuse@support.whatsapp.com <small>(WhatsApp Global)</small></label>
+                </div>
+                <div class="checkbox-item">
+                    <input type="checkbox" id="email_wa_fr" value="wa-france@support.whatsapp.com">
+                    <label for="email_wa_fr">🇫🇷 wa-france@support.whatsapp.com <small>(França)</small></label>
+                </div>
+                <div class="checkbox-item">
+                    <input type="checkbox" id="email_abuse_meta" value="abuse@fb.com">
+                    <label for="email_abuse_meta">🛡️ abuse@fb.com <small>(Meta - Facebook)</small></label>
+                </div>
+                <div class="checkbox-item">
+                    <input type="checkbox" id="email_signal_spam" value="signal@signal-spam.fr">
+                    <label for="email_signal_spam">📢 signal@signal-spam.fr <small>(Anti-spam França)</small></label>
+                </div>
+                <div class="checkbox-item">
+                    <input type="checkbox" id="email_pharos" value="pharos@interieur.gouv.fr">
+                    <label for="email_pharos">⚖️ pharos@interieur.gouv.fr <small>(Polícia da Internet - França)</small></label>
+                </div>
+            </div>
+        </div>
+
+        <div class="selected-count" id="selectedCount">✅ 1 destinatário selecionado</div>
     </div>
 
-    <button id="reporterBtn">📢 إرسال الإبلاغ إلى البريد الإلكتروني</button>
+    <button id="reporterBtn">📢 ENVIAR DENÚNCIA POR E-MAIL</button>
 
     <div class="preview-area">
-        <div class="preview-label">✉️ نص الإبلاغ (سيتم فتح البريد تلقائياً)</div>
-        <div class="arabic-message" id="messagePreview">
-            (أدخل الرقم والسبب)
+        <div class="preview-label">✉️ MENSAGEM (será aberto no seu e-mail)</div>
+        <div class="portuguese-message" id="messagePreview">
+            (Digite o número e o motivo)
         </div>
     </div>
     <div class="footer-note">
-        🔒 إبلاغ واحد حقيقي لكل رقم · الإبلاغ الجماعي المزيف غير قانوني
+        🔒 Uma denúncia real por número · Denúncias falsas em massa são ilegais<br>
+        📌 Nota: O WhatsApp não bane facilmente por e-mail · Denuncie dentro do app
     </div>
     <div class="luffy-credit">
-        🏴‍☠️ روح جوي بوي - لوفي يحمي العدالة 🏴‍☠️
+        🏴‍☠️ Espírito do Joy Boy - Monkey D. Luffy protege os injustiçados 🏴‍☠️
     </div>
 </div>
 
@@ -346,8 +391,13 @@
     const reporterBtn = document.getElementById('reporterBtn');
     const selectedCountSpan = document.getElementById('selectedCount');
     
-    // Liste des checkboxes email
-    const checkboxes = [
+    const allCheckboxes = [
+        document.getElementById('email_africa'),
+        document.getElementById('email_mali'),
+        document.getElementById('email_senegal'),
+        document.getElementById('email_ci'),
+        document.getElementById('email_cameroon'),
+        document.getElementById('email_francafrique'),
         document.getElementById('email_abuse'),
         document.getElementById('email_wa_fr'),
         document.getElementById('email_abuse_meta'),
@@ -356,72 +406,75 @@
     ];
 
     function getSelectedEmails() {
-        return checkboxes.filter(cb => cb.checked).map(cb => cb.value);
+        return allCheckboxes.filter(cb => cb && cb.checked).map(cb => cb.value);
     }
 
     function updateSelectedCount() {
         const count = getSelectedEmails().length;
-        selectedCountSpan.innerHTML = `✅ تم اختيار ${count} جهة ${count === 0 ? '⚠️ الرجاء اختيار جهة واحدة على الأقل' : ''}`;
         if (count === 0) {
+            selectedCountSpan.innerHTML = '⚠️ Selecione pelo menos um destinatário';
             selectedCountSpan.style.color = '#FF6666';
         } else {
+            selectedCountSpan.innerHTML = `✅ ${count} destinatário${count !== 1 ? 's' : ''} selecionado${count !== 1 ? 's' : ''}`;
             selectedCountSpan.style.color = '#FFA500';
         }
     }
 
-    function genererMessageArabe() {
+    function gerarMensagemPortugues() {
         let numero = numeroInput.value.trim();
-        let motif = motifSelect.options[motifSelect.selectedIndex]?.text || motifSelect.value;
+        let motivo = motifSelect.options[motifSelect.selectedIndex]?.text || motifSelect.value;
 
         if (!numero) {
-            return "❌ خطأ: الرجاء إدخال رقم صحيح مثل +22376123456";
+            return "❌ Erro: Digite um número válido (ex: +22376123456 para Mali, +22177123456 para Senegal)";
         }
         if (!numero.startsWith('+')) {
             numero = '+' + numero;
         }
 
-        const date = new Date().toLocaleDateString('ar-EG');
+        const data = new Date().toLocaleDateString('pt-BR');
         
-        return `الموضوع: بلاغ عاجل - ${motif} - واتساب
+        return `ASSUNTO: DENÚNCIA URGENTE - ${motivo} - Número ${numero}
 
-إلى فريق دعم واتساب / الجهات المختصة،
+Para equipe de suporte do WhatsApp,
 
-السلام عليكم، أنا شريف غاضب جدا وأطلب منكم التحرك فوراً.
+Olá, estou muito irritado e cansado desta pessoa. Este número ${numero} pratica crimes diariamente.
 
-الرقم المخالف: ${numero}
+MOTIVO: ${motivo}
 
-السبب: ${motif}
+O que ele/ela faz exatamente:
+- Envia mensagens fraudulentas e tenta aplicar golpes
+- Me assedia e ameaça constantemente
+- Envia spam e anúncios indesejados sem meu consentimento
+- Tenho medo pela minha família por causa dessa pessoa
 
-هذا الحساب يمارس أعمالاً إجرامية:
-- يرسل رسائل احتيالية / تهديدات
-- يتحرش ويضايق الناس بدون سبب
-- أنا لست آمناً مع استمرار هذا الشخص
+Tenho capturas de tela como prova de tudo o que estou dizendo.
 
-أرفق لكم لقطة شاشة كدليل. أطلب منكم حظر هذا الرقم فوراً لحماية المستخدمين الشرفاء.
+Peço com toda sinceridade: verifiquem este número URGENTEMENTE e o eliminem do WhatsApp para sempre. Ninguém consegue viver em paz com criminosos assim.
 
-أريد العدالة الآن.
+Confio na justiça de vocês.
 
-شكراً لكم
-رجل حقيقي تعرض للإيذاء
-${date}`;
+Aguardo ação imediata antes que ele/ela prejudique outras pessoas.
+
+Atenciosamente,
+Um homem honesto que foi injustiçado
+${data}`;
     }
 
-    function mettreAJourApercu() {
-        previewDiv.innerText = genererMessageArabe();
+    function atualizarPreview() {
+        previewDiv.innerText = gerarMensagemPortugues();
     }
 
-    function envoyerEmail() {
+    function enviarEmail() {
         let numero = numeroInput.value.trim();
-        let motif = motifSelect.options[motifSelect.selectedIndex]?.text || motifSelect.value;
         
         if (!numero) {
-            alert("⚠️ الرجاء إدخال رقم الهاتف قبل الإرسال");
+            alert("⚠️ Digite o número de telefone antes de enviar");
             return;
         }
         
         const selectedEmails = getSelectedEmails();
         if (selectedEmails.length === 0) {
-            alert("⚠️ الرجاء اختيار جهة إرسال واحدة على الأقل");
+            alert("⚠️ Selecione pelo menos um destinatário");
             return;
         }
         
@@ -429,35 +482,34 @@ ${date}`;
             numero = '+' + numero;
         }
         
-        const message = genererMessageArabe();
-        const sujet = `بلاغ عاجل - ${motif} - واتساب ${numero}`;
+        const mensagem = gerarMensagemPortugues();
+        const motivo = motifSelect.options[motifSelect.selectedIndex]?.text || motifSelect.value;
+        const assunto = `Denúncia urgente - ${motivo} - ${numero}`;
         
-        // Joindre plusieurs emails avec des virgules (valide pour mailto)
         const emailsString = selectedEmails.join(',');
-        const mailtoLink = `mailto:${emailsString}?subject=${encodeURIComponent(sujet)}&body=${encodeURIComponent(message)}`;
+        const mailtoLink = `mailto:${emailsString}?subject=${encodeURIComponent(assunto)}&body=${encodeURIComponent(mensagem)}`;
         
-        // Redirection vers l'email
         window.location.href = mailtoLink;
     }
 
-    // Écouteurs
-    numeroInput.addEventListener('input', mettreAJourApercu);
-    motifSelect.addEventListener('change', mettreAJourApercu);
-    checkboxes.forEach(cb => {
-        cb.addEventListener('change', () => {
-            updateSelectedCount();
-            mettreAJourApercu();
-        });
+    numeroInput.addEventListener('input', atualizarPreview);
+    motifSelect.addEventListener('change', atualizarPreview);
+    allCheckboxes.forEach(cb => {
+        if (cb) {
+            cb.addEventListener('change', () => {
+                updateSelectedCount();
+                atualizarPreview();
+            });
+        }
     });
     
     reporterBtn.addEventListener('click', () => {
-        envoyerEmail();
+        enviarEmail();
         reporterBtn.style.transform = 'scale(0.97)';
         setTimeout(() => { reporterBtn.style.transform = ''; }, 150);
     });
 
-    // Initialisation
-    mettreAJourApercu();
+    atualizarPreview();
     updateSelectedCount();
 </script>
 </body>
